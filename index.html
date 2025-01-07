@@ -168,7 +168,36 @@
     Stream Status: 
     <span id="status-indicator" style="color: #aaa; font-size: 2rem;">Checking...</span>
   </h2>
+  <a id="stream-link" href="#" target="_blank" 
+     style="display: none; text-decoration: none; font-family: 'Press Start 2P', cursive; font-size: 1.2rem; background: #00ff00; color: #111; padding: 10px 20px; border-radius: 5px; margin-top: 20px; display: inline-block; text-shadow: 0 0 5px #111;">
+    Watch Live Stream
+  </a>
 </section>
+
+<script>
+  // Manual toggle: Set to 1 if the stream is live, otherwise set to 0
+  const isLive = 1;
+
+  // Update status indicator and button based on the value of isLive
+  const statusIndicator = document.getElementById('status-indicator');
+  const streamLink = document.getElementById('stream-link');
+
+  if (isLive) {
+    statusIndicator.textContent = 'Live!';
+    statusIndicator.style.color = '#00ff00'; // Green for live
+
+    // Show the "Watch Live Stream" button
+    streamLink.style.display = 'inline-block';
+    streamLink.href = 'https://example.com/your-stream'; // Update with your actual stream URL
+  } else {
+    statusIndicator.textContent = 'Offline';
+    statusIndicator.style.color = '#ff0000'; // Red for offline
+
+    // Hide the "Watch Live Stream" button
+    streamLink.style.display = 'none';
+  }
+</script>
+
 
 <script>
   // Manual toggle: Set to 1 if the stream is live, otherwise set to 0
