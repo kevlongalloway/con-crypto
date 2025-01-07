@@ -163,27 +163,49 @@
       while connecting a global community. Join us as we turn bars into inspiration.
     </p>
 					</section>
+					<section id="stream-status" style="background: #111; color: #f9f9f9; text-align: center; padding: 50px 20px;">
+  <h2 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 20px; text-shadow: 0 0 10px #222;">
+    Stream Status: 
+    <span id="status-indicator" style="color: #aaa; font-size: 2rem;">Checking...</span>
+  </h2>
+</section>
+
+<script>
+  // Manual toggle: Set to 1 if the stream is live, otherwise set to 0
+  const isLive = 1;
+
+  // Update status indicator based on the value of isLive
+  const statusIndicator = document.getElementById('status-indicator');
+  if (isLive) {
+    statusIndicator.textContent = 'Live!';
+    statusIndicator.style.color = '#00ff00'; // Green for live
+  } else {
+    statusIndicator.textContent = 'Offline';
+    statusIndicator.style.color = '#ff0000'; // Red for offline
+  }
+</script>
+
 					<!-- Artwork Section -->
 					<section id="artwork" class="artwork-section">
 						<h2 class="text-4xl text-center gradient-text glow">Featured Artwork</h2>
 						<div class="artwork-grid mt-10">
 							<div class="artwork-item">
 								<img src="IMG_1265.jpeg" alt="Artwork 1">
-								</div>
-								<div class="artwork-item">
-									<img src="https://unsplash.it/400/400?image=20" alt="Artwork 2">
-									</div>
-									<div class="artwork-item">
-										<img src="https://unsplash.it/400/400?image=30" alt="Artwork 3">
-										</div>
-										<div class="artwork-item">
-											<img src="https://unsplash.it/400/400?image=40" alt="Artwork 4">
-											</div>
-										</div>
-									</section>
+							</div>
+							<div class="artwork-item">
+								<img src="https://unsplash.it/400/400?image=20" alt="Artwork 2">
+						        </div>
+							<div class="artwork-item">
+								<img src="https://unsplash.it/400/400?image=30" alt="Artwork 3">
+							</div>
+							<div class="artwork-item">
+								<img src="https://unsplash.it/400/400?image=40" alt="Artwork 4">
+							</div>
+						</div>
+					</section>
 									<!-- Features Section -->
 									<section id="features" class="py-20 bg-gray-900 text-center">
-										<h2 class="text-4xl gradient-text glow">Features</h2>
+										<h2 class="text-4xl gradient-text glow">Plans</h2>
 										<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-6">
 											<div class="glow-card">
 												<h3 class="text-2xl font-bold gradient-text">Live Streams
@@ -200,6 +222,18 @@
 											</div>
 										</div>
 									</section>
+					<section style="background: linear-gradient(90deg, #333, #000); color: #f9f9f9; text-align: center; padding: 50px 20px;">
+  <h2 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 20px; text-shadow: 0 0 10px #222;">
+    CA: <span style="color: #ff6f61; text-transform: uppercase;">Coming Soon!</span>
+  </h2>
+  <p style="font-size: 1.5rem; font-family: 'Press Start 2P', cursive; color: #aaa; text-shadow: 0 0 5px #111;">
+    Get ready for something revolutionary. Stay tuned for updates!
+  </p>
+</section>
+
+<footer class="py-6 bg-black text-center">
+    <p>&copy; 2025 $CON Memecoin. All Rights Reserved.</p>
+</footer>
 									<!-- Animations -->
 									<script>
     // Bars Opening Animation
