@@ -27,7 +27,11 @@
       font-family: 'Orbitron', sans-serif;
       overflow-x: hidden;
     }
-
+						
+    .no-scroll {
+	    overflow: hidden;
+    }
+						
     .gradient-text {
       background: linear-gradient(90deg, #999, #555);
       -webkit-background-clip: text;
@@ -150,7 +154,7 @@
 
   </style>
 				</head>
-				<body>
+				<body class="no-scroll">
 					<!-- Intro Screen -->
 					<div class="bars-container">
 						<div class="intro-text gradient-text">Welcome to $CON</div>
@@ -286,6 +290,7 @@
 									<script>
     // Bars Opening Animation
     document.querySelector('.bars-container').addEventListener('click', () => {
+	    document.body.classList.remove('no-scroll');
 	    window.scrollTo(0, 0); 
       gsap.to('.bar', { scaleX: 0, duration: 1, stagger: 0.1 });
       gsap.to('.bars-container', { opacity: 0, duration: 1.5, delay: 1, onComplete: () => {
