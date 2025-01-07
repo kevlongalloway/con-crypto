@@ -288,9 +288,9 @@
     document.querySelector('.bars-container').addEventListener('click', () => {
       gsap.to('.bar', { scaleX: 0, duration: 1, stagger: 0.1 });
       gsap.to('.bars-container', { opacity: 0, duration: 1.5, delay: 1, onComplete: () => {
-	      window.scrollTo(0, 0);
-          document.querySelector('.bars-container').style.display = 'none';
 	      
+          document.querySelector('.bars-container').style.display = 'none';
+	     window.scrollTo(0, 0); 
       }});
     });
   </script>
